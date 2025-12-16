@@ -18,9 +18,12 @@ This is a highly customized Python script designed to automate the process of cr
 
 You need Python 3 installed on your system (tested on Ubuntu/WSL). The project requires the following Python libraries:
 
-Usage
-Clone the Repository:
-git clone https://github.com/tomnuongcay/Mail.tm-LISTENER.git
+# 1. Clone the Repository
+git clone [https://github.com/tomnuongcay/Mail.tm-LISTENER.git](https://github.com/tomnuongcay/Mail.tm-LISTENER.git)
 cd Mail.tm-LISTENER
+
+# 2. Install dependencies
 pip install -r requirements.txt
-Run bot: python3 bot.py
+
+# 3. Run the Bot
+python3 bot.py
