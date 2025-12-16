@@ -20,7 +20,7 @@ You need Python 3 installed on your system (tested on Ubuntu/WSL). The project r
 
 # 1. Clone the Repository
 git clone [https://github.com/tomnuongcay/Mail.tm-LISTENER.git](https://github.com/tomnuongcay/Mail.tm-LISTENER.git)
-cd Mail.tm-LISTENER
+&& cd Mail.tm-LISTENER
 
 # 2. Install dependencies
 pip install -r requirements.txt
