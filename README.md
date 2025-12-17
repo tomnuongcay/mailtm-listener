@@ -22,5 +22,5 @@ Một công cụ mã nguồn mở mạnh mẽ giúp tự động hóa việc t�
 
 1. **Tải mã nguồn về máy:**
    ```bash
-   git clone https://github.com/tomnuongcay/Mail.tm-LISTENER.git
-   cd Mail.tm-LISTENER
+   git clone https://github.com/tomnuongcay/mailtm-listener.git
+   cd mailtm-listener
