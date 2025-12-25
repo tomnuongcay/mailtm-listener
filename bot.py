@@ -74,15 +74,23 @@ class MailTMListener:
                     if messages:
                         m_id = messages[0]['id']
                         r_msg = requests.get(f"{self.api_url}/messages/{m_id}", headers=headers, timeout=2)
-                        body = r_msg.json().get('text') or r_msg.json().get('intro') or ""
+                        data = r_msg.json()
+                        body = data.get('text') or data.get('intro') or ""
+                        
+                        print(Fore.BLUE + "\n" + "="*50)
+                        print(f"{Style.BRIGHT}{Fore.YELLOW}✨ NỘI DUNG EMAIL MỚI ✨")
+                        print(f"{Fore.CYAN}Tiêu đề: {data.get('subject', 'Không có tiêu đề')}")
+                        print(f"{Fore.WHITE}{'-'*20}")
+                        print(f"{Fore.GREEN}{body.strip()}")
+                        print(f"{Fore.WHITE}{'-'*20}")
+                        
                         match = re.search(r'\b\d{6}\b', body)
                         if match:
                             code = match.group(0)
-                            print(Fore.BLUE + "\n" + "="*50)
-                            print(f"{Style.BRIGHT}{Fore.YELLOW}✨ CODE ĐÃ VỀ! ✨")
-                            print(f"{Fore.GREEN} Mã xác minh là: {Fore.RED}{Style.BRIGHT}{code}")
-                            print(Fore.BLUE + "="*50)
-                            return code
+                            print(f"{Fore.GREEN}Mã xác minh tìm thấy: {Fore.RED}{Style.BRIGHT}{code}")
+                        
+                        print(Fore.BLUE + "="*50)
+                        return "done"
             except:
                 pass
             
